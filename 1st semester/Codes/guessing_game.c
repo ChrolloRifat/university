@@ -1,3 +1,7 @@
+/*
+ *Making a guessing game
+ */
+
 #include <stdio.h>
 void game(int);
 

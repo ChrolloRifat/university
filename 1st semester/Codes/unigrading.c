@@ -1,3 +1,7 @@
+/*
+ *Showing a students grade in the Left Right University
+ */
+
 #include <stdio.h>
 void grading(float x);
 int main()
