@@ -3,8 +3,10 @@ void grading(float x);
 int main()
 {
     float x;
+    printf("Welcome to Left-Right University\n\nPlease enter your marks: ");
     scanf("%f", &x);
     grading(x);
+    printf("\nThanks for using the program to know your grades!\n");
 }
 
 void grading(float x)
