@@ -14,8 +14,8 @@ int main() // starting the program
     scanf("%d", &id);
 
     // enter mark
-    printf("enter the mark of 4 subject\n"),
-        scanf("%d%d%d%d", &mark1, &mark2, &mark3, &mark4);
+    printf("enter the mark of 4 subject\n");
+    scanf("%d%d%d%d", &mark1, &mark2, &mark3, &mark4);
 
     // calculating the sum and percentage
     mark_sum = (double)(mark1 + mark2 + mark3 + mark4);
