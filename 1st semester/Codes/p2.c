@@ -6,7 +6,7 @@ int main()
 {
     int num;
     printf("Please enter the number: \n");
-    scanf("%d",&num);
+    scanf("%d", &num);
     if (num == 1)
     {
         printf("It's Saturday, mate!\n");
@@ -35,7 +35,10 @@ int main()
     {
         printf("It's Friday. Jumma Mubarak!\n");
     }
-    else{
+    else
+    {
         printf("Stop assuming that there are more than seven days in a week\n");
     }
+
+    return 0;
 }

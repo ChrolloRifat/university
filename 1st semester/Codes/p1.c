@@ -20,4 +20,6 @@ int main()
     {
         printf("The input isn't alphabet\n");
     }
+
+    return 0;
 }
