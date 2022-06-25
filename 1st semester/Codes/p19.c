@@ -1,5 +1,5 @@
 /**
- * C program to check Leap Year check whether a character is an alphabet
+ * C program to check whether a character is an alphabet
  */
 
 #include <stdio.h>
