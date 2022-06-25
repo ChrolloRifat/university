@@ -1,5 +1,9 @@
 /**
- *Uppercase or lowercase letter
+ * @file p1.c
+ * @author Mahmudul Hasan Rifat (mahumudul.rifat1@northsouth.edu)
+ * @brief  C program to check whether an alphabet is uppercase or lowercase
+ * @date 2022-06-24
+ * @copyright Copyright (c) 2022
  */
 
 #include <stdio.h>
