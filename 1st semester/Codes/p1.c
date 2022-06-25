@@ -1,6 +1,8 @@
 /**
  * @file p1.c
  * @author Mahmudul Hasan Rifat (mahumudul.rifat1@northsouth.edu)
+ * @class CSE115L
+ * @section 2
  * @brief  C program to check whether an alphabet is uppercase or lowercase
  * @date 2022-06-24
  * @copyright Copyright (c) 2022

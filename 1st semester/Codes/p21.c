@@ -1,6 +1,8 @@
 /**
  * @file p21.c
  * @author Mahmudul Hasan Rifat (mahumudul.rifat1@northsouth.edu)
+ * @class CSE115L
+ * @section 2
  * @brief  C program to check a character is an alphabet, digit, or special character
  * @date 2022-06-24
  * @copyright Copyright (c) 2022
