@@ -4,7 +4,7 @@ int main()
 {
     float q,m,f,a;
     char grade;
-    scanf("%f%f%f%f",&q,&m,&f,&a);
+    scanf("%f%f%f%f",&q,&m,&f,&a);          //takes input of quiz, midterm, final and assigments marks
     grade = generateGrade(q,m,f,a);
     printf("Your grade is %c\n",grade);
 
@@ -31,7 +31,7 @@ char generateGrade(float quiz, float mid, float fin, float assign)
     }
     else
     {
-        gra = 'FAIL';
+        gra = 'F';
     }
     return gra;
 }
