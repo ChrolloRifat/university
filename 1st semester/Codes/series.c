@@ -1,25 +1,22 @@
-/**
- * C program to compute the series 1/1-1/3+1/5-...
- */
 #include <stdio.h>
 
 int main()
 {
-    int count = 1, n = 0;
+    int count = 1, x = 0;
     float sum = 0;
 
     while (count <= 5)
     {
-        if (n % 2 == 1)
+        if (x % 2 == 1)
         {
             sum -= (1.0 / count);
-            n++;
+            x++;
             count += 2;
         }
         else
         {
             sum += (1.0 / count);
-            n++;
+            x++;
             count += 2;
         }
     }
