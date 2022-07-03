@@ -1,5 +1,5 @@
 /**
- *C program to find power of any number
+ *C program to calculate the value of nPr
  */
 #include <stdio.h>
 int perm(int n)
