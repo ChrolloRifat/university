@@ -1,12 +1,16 @@
+/**
+ *C program to calculate the sum of squares
+ */
 #include <stdio.h>
 int main()
 {
      int i, n, sum;
      sum = 0;
+     printf("Enter n: ");
      scanf("%d", &n);
-     for (i = 3; i <= n; i += 4)
+     for (i = 1; i <= n; i++)
      {
-          sum = sum + i;
+          sum = sum + i * i;
      }
      printf("sum = %d\n", sum);
      return 0;
