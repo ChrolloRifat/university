@@ -21,8 +21,8 @@ int main()
 
     /*Reverse the string*/
     /* Method 1*/
-    
-    // for (i = 0, j = count; i < count / 2; i++, j--)
+
+    // for (i = 0, j = count - 1; i < count / 2; i++, j--)
     // {
     //     temp = str[i];
     //     str[i] = str[j];
@@ -33,8 +33,8 @@ int main()
     for (i = 0; i < count / 2; i++)
     {
         temp = str[i];
-        str[i] = str[count - i];
-        str[count - i] = temp;
+        str[i] = str[count - 1 - i];
+        str[count - 1 - i] = temp;
     }
     printf("Reversed String: %s\n", str);
 
