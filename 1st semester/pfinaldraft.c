@@ -315,12 +315,17 @@ void menu() /// Menu Screen
 
       long int recsize; // size of each record of food
 
-      fp = fopen("FS.csv", "r+");
-      if (fp == NULL)
-      {
-        printf("Connot open file");
-        exit(1);
-      }
+         fp = fopen("FOS.DAT","rb+");
+    if(fp == NULL)
+    {
+        fp = fopen("FOS.DAT","wb+");
+        if(fp == NULL)
+        {
+            printf("Connot open file");
+            exit(1);
+        }
+    }
+
 
       // size of each record i.e. size of structure variable e
       recsize = sizeof(e);
@@ -354,7 +359,7 @@ void menu() /// Menu Screen
             scanf("%s", e.name);
             printf("\nEnter Price: ");
             scanf("%d", &e.pri);
-            fprintf(fp, "%s %d ", e.name, e.pri); // write the record in the file
+            fwrite(&e,recsize,1,fp); // write the record in the file
             printf("\nAdd another record(y/n) ");
             fflush(stdin);
             scanf("%c", another);
@@ -363,7 +368,7 @@ void menu() /// Menu Screen
         case '2':
           system("cls");
           rewind(fp);                                       // this moves file cursor to start of the file
-          while (fprintf(fp, "%s %d ", e.name, e.pri) == 1) // read the file and fetch the record one record per fetch
+          while(fread(&e,recsize,1,fp)==1)  // read the file and fetch the record one record per fetch
           {
             printf("\nItem is %s", e.name);
             printf("\nPrice is: %d", e.pri);
@@ -377,23 +382,23 @@ void menu() /// Menu Screen
           {
             printf("\nEnter name of Food to delete: ");
             scanf("%s", empname);
-            ft = fopen("Temp.csv", "w");                      // create a intermediate file for temporary storage
+            ft = fopen("Temp.dat","wb");  // create a inteRs.ediate file for temporary storage
             rewind(fp);                                       // move record to starting of file
-            while (fprintf(fp, "%s %d ", e.name, e.pri) == 1) // read all records from file
+           while(fread(&e,recsize,1,fp) == 1)  // read all records from file
             {
               if (strcmp(e.name, empname) != 0) // if the entered record match
               {
-                fprintf(fp, "%s %d ", e.name, e.pri); // move all records except the one that is to be deleted to temp file
+                fwrite(&e,recsize,1,ft); // move all records except the one that is to be deleted to temp file
               }
             }
-            fclose(fp);
-            fclose(ft);
-            remove("FS.csv");             // remove the original file
-            rename("Temp.csv", "FS.csv"); // rename the temp file to original file name
-            fp = fopen("FS.csv", "r+");
-            printf("Delete another record(y/n)");
-            fflush(stdin);
-            scanf("%c", another);
+                fclose(fp);
+                fclose(ft);
+                remove("FOS.DAT"); // remove the original file
+                rename("Temp.dat","FOS.DAT"); // rename the temp file to original file name
+                fp = fopen("FOS.DAT", "rb+");
+                printf("Delete another record(y/n)");
+                fflush(stdin);
+                scanf("%c", another);
           }
           break;
         case '4':
