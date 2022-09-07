@@ -66,13 +66,12 @@ int main()
             }
         }
 
-        // /* Check words */
-        // if (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\0')
-        // {
-        //     words++;
-        //     printf("words: %d\n", words);
-        // }
-        /* Print the frequency of all characters in the string */
+        /* Check words */
+        if (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\0')
+        {
+            words++;
+            printf("words: %d\n", words);
+        }
     }
 
     /* Increment words and lines for last word */
